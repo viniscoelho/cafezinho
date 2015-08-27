@@ -1,0 +1,47 @@
+/*Este progrma contem ERRO*/
+int selectionSort (int vet[], int n){
+  int i;
+  car x;
+  i=1;
+  enquanto( i<=n-1) execute{
+	int Min; int j;
+	Min=i;
+	j=i+1;
+	enquanto (j<=n) execute {
+		se (vet[j] < vet[Min])
+		entao
+		   Min=j;
+		j=j+1;
+	}	
+	x=vet[Min]; vet[Min]=vet[i]; vet[i]=x;
+  	i=i+1;
+  }  
+  retorne 1;
+}
+programa{
+   int vet[10];
+   int i;
+   escreva "Digite os valores de um vetor de 10 inteiros ";
+   novalinha;
+   i=0;
+   enquanto (i<10)execute{
+	escreva "Digite o valor do elemento ";
+	escreva i;
+	novalinha;
+	leia vet[i];
+	i=i+1;
+   } 
+   escreva Min;
+   selectionSort(vet, 10); /*vetor car sendo passado como argumento
+                                          para parametro que e um vetor de int*/
+   escreva "Vetor ordenado: ";
+   novalinha;
+   i=0;
+   enquanto (i<10) execute{
+	escreva vet[i];
+	escreva " ";
+	i=i+1;
+   }
+}
+
+
