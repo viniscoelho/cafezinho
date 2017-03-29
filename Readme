@@ -1,3 +1,0 @@
-Para compilar, basta descompactar o arquivo e digitar make (ou mudar o parametro de -lfl para -ll do makefile, caso for compilar este programa no mac). Para executar, digite ./cafezinho “nome_do_arquivo”.
-
-Pelos testes que realizei, está funcionando corretamente.
