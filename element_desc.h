@@ -1,13 +1,12 @@
 #ifndef element_desc_h
 #define element_desc_h
 #include <iostream>
-#include <vector>
 #include <string>
+#include <vector>
 
 using namespace std;
 
-typedef enum
-{
+typedef enum {
     SUM,
     SUB,
     MULTIPLY,
@@ -24,20 +23,18 @@ typedef enum
     CONDITIONAL,
     LESS_EQUAL,
     GREATER_EQUAL
-}Operator;
+} Operator;
 
-typedef enum
-{
+typedef enum {
     VAR_EMPTY,
     VAR_INTEGER,
     VAR_ERROR,
     VAR_CHAR,
     VAR_STRING
-}VarType;
+} VarType;
 
-typedef enum
-{
-    ASSIGN, 
+typedef enum {
+    ASSIGN,
     IDENTIFIER,
     STATEMENT,
     ID_ARRAY,
@@ -65,21 +62,24 @@ typedef enum
     RETURN,
     EXPRESSION,
     EXPRESSION_LIST
-}NodeType;
+} NodeType;
 
-struct Element
-{
+struct Element {
     vector<Element*> list;
     int lineNum, intValue, level;
     char charValue;
-    string *name;
+    string* name;
     Operator operatorType;
     NodeType nodeType;
     VarType varType;
-    Element *id;
+    Element* id;
 
     //constructor
-    Element() { name = new string(""); intValue = -1; }
+    Element()
+    {
+        name = new string("");
+        intValue = -1;
+    }
 };
 
 #endif
